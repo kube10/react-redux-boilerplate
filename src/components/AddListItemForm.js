@@ -9,13 +9,7 @@ const AddListItemForm = () => {
 
   const onItemAdded = () => {
     if (text !== "") {
-      dispatch(
-        itemAdded({
-          id: nanoid(),
-          text,
-        })
-      );
-
+      dispatch(itemAdded(text));
       setText("");
     }
   };
